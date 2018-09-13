@@ -20,12 +20,12 @@ namespace SimpleCalculator
         {
             InitializeComponent();
         }
-        ServiceReference1 calcRef;
+        CalculatorReference calcRef;
         private void frmCalculator_Load(object sender, EventArgs e)
             
             
         {
-            calcRef = new ServiceReference1.CalculatorSoapClient();
+            calcRef = new CalculatorReference.CalculatorSoapClient();
             btnOne.Click += new EventHandler(btn_Click);
             btnTwo.Click += new EventHandler(btn_Click);
             btnThree.Click += new EventHandler(btn_Click);
@@ -53,8 +53,8 @@ namespace SimpleCalculator
                     case "btnFour":                        
                     case "btnFive":                      
                     case "btnSix":                       
-                    case "btnSeven":                      
-                    case "btnEight"                       
+                    case "btnSeven":
+                    case "btnEight":                      
                     case "btnNine":                       
                     case "btnZero":
                         txtInput.Text += btn.text;
